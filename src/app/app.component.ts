@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Product } from './models/product';
+import { StoreService } from './service/store.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demo-application';
+
+  protected readonly productList$: Observable<Product>;
+
+  constructor(storeService: StoreService) {
+    this.productList$ = storeService.getAllStore();
+  }
 }
