@@ -1,0 +1,40 @@
+.store {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-inline: 200px;
+}
+
+.store__product-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 170px; 
+}
+
+.store__product {
+  max-width: 200px;
+  max-height: 500px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.store__product-image {
+  height: 200px;
+  max-width: 200px;
+}
+
+.store__product-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* after 3 line show ... */
+  -webkit-box-orient: vertical;
+}
+
+.store__product-link {
+  cursor: pointer;
+}

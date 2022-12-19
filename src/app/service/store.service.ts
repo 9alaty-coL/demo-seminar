@@ -10,7 +10,7 @@ export class StoreService {
 
   public constructor(private readonly httpClient: HttpClient) {}
 
-  public getAllStore(): Observable<Product> {
-    return this.httpClient.get<Product>('https://fakestoreapi.com/products');
+  public getAllStore(): Observable<Product[]> {
+    return this.httpClient.get<Product[]>('https://fakestoreapi.com/products');
   }
 }
