@@ -1,1 +1,12 @@
-<p>product-detail works!</p>
+<div *ngIf="productDetails$ | async as productDetails">
+  <div class='product'>
+    <div class='product__image-container'>
+      <img class='product__image' alt='' src={{productDetails.image}}/>
+    </div>
+    <div class='product__info'>
+      <div class='product__field'><span class='product__label'>Name:</span> {{productDetails.title}}</div>
+      <div class='product__field'><span class='product__label'>Price:</span> {{productDetails.price}} $</div>
+      <div class='product__field'><span class='product__label'>Description:</span> {{productDetails.description}}</div>
+    </div>
+  </div>
+</div>
